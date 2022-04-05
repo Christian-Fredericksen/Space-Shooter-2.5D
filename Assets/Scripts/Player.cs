@@ -6,15 +6,27 @@ public class Player : MonoBehaviour
 {
     [SerializeField]
     private float _speed = 3.5f;
-
+    [SerializeField]
+    private GameObject _laserPrefab;
     void Start()
     {
         transform.position = new Vector3(0, 0, 0);
     }
 
+
+
     void Update()
     {
         CalculateMovement();
+
+        //if i hit the space key
+        //spawn a laser
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(_laserPrefab, transform.position, Quaternion.identity);          
+        }
+
     }
 
     void CalculateMovement()
@@ -43,9 +55,7 @@ public class Player : MonoBehaviour
         {
             transform.position = new Vector3(9.3f, transform.position.y, 0);
         }
-
     }
-
 }
 
 
