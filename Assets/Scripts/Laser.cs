@@ -15,10 +15,7 @@ public class Laser : MonoBehaviour
 
     // Update is called once per frame
 
-    void DestroyGameObject()
-    {
-        Destroy(this.gameObject);
-    }
+    
     void Update()
     {
         //translate laser up
@@ -27,7 +24,7 @@ public class Laser : MonoBehaviour
         //destroy laser
         if(transform.position.y >= 8.0f)
         {
-            DestroyGameObject();
+            Destroy(this.gameObject);
         }
     }
 }

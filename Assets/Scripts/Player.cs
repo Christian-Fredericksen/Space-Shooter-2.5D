@@ -21,10 +21,10 @@ public class Player : MonoBehaviour
 
         //if i hit the space key
         //spawn a laser
-
+        Vector3 offset = new Vector3(0, 0.8f, 0);
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(_laserPrefab, transform.position, Quaternion.identity);          
+            Instantiate(_laserPrefab, transform.position + offset, Quaternion.identity);          
         }
 
     }
