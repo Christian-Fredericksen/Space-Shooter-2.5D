@@ -24,10 +24,10 @@ public class Player : MonoBehaviour
         Vector3 offset = new Vector3(0, 0.8f, 0);
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(_laserPrefab, transform.position + offset, Quaternion.identity);          
+            Instantiate(_laserPrefab, transform.position, Quaternion.identity);
         }
 
-    }
+    } 
 
     void CalculateMovement()
     {
@@ -57,6 +57,8 @@ public class Player : MonoBehaviour
         }
     }
 }
+       
+
 
 
 //  WRAP PLAYER AROUND SCREEN BOTH DIRECTIONS
