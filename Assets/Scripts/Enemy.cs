@@ -10,7 +10,7 @@ public class Enemy : MonoBehaviour
         transform.position = new Vector3(0, 8.0f, 0);
     }
 
-    private float _speed = 4.0f;
+    private float _speed = 6.0f;
 
     // Update is called once per frame
     void Update()
@@ -21,7 +21,7 @@ public class Enemy : MonoBehaviour
         // reach bottom and respawn at top
         if (transform.position.y <= -7.0f)
         {
-            transform.position = new Vector3(0, 8.0f, 0);
+            transform.position = new Vector3(Random.Range(-9.3f, 9.3f), 8.0f, 0);
         }
         // BONUS: respawn at random X position
     }
