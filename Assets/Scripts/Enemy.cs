@@ -15,10 +15,14 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // move down 4 meters per second
         transform.Translate(Vector3.down * _speed * Time.deltaTime);
 
-        // move down 4 meters per second
         // reach bottom and respawn at top
+        if (transform.position.y <= -7.0f)
+        {
+            transform.position = new Vector3(0, 8.0f, 0);
+        }
         // BONUS: respawn at random X position
     }
 }
