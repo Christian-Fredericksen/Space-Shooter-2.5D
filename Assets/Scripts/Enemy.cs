@@ -10,9 +10,8 @@ public class Enemy : MonoBehaviour
 
     }
 
-
     [SerializeField]
-    private float _speed = 6.0f;
+    private float _speed = 4.0f;
 
     // Update is called once per frame
     void Update()
@@ -23,6 +22,26 @@ public class Enemy : MonoBehaviour
         {
             float randomX = Random.Range(-9.3f, 9.3f);
             transform.position = new Vector3(randomX, 8.0f, 0);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        //if other is Player
+        if (other.tag == "Player")
+        //damage player
+        //destroy us
+        {
+            Destroy(this.gameObject);
+        }
+
+        //if other is laser
+        else if (other.tag == "Laser")
+        {
+            //destroy laser
+            Destroy(other.gameObject);
+            //destroy us
+            Destroy(this.gameObject);
         }
     }
 }
