@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6075162820061181858}
   - component: {fileID: 98412752708226699}
   - component: {fileID: 7907609846140861004}
-  - component: {fileID: -2855704931639247024}
+  - component: {fileID: 418571679443421323}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 4.13
---- !u!54 &-2855704931639247024
+--- !u!54 &418571679443421323
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
