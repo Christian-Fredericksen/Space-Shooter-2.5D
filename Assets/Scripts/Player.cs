@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     private float _speed = 3.5f;
     [SerializeField]
     private GameObject _laserPrefab;
+    
     void Start()
     {
         //Define a starting position.
@@ -19,6 +20,7 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
+    
     void Update()
     {
         calculateMovement();
@@ -28,7 +30,8 @@ public class Player : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(_laserPrefab, transform.position, Quaternion.identity);
+            Vector3 offset = new Vector3(0, .8f, 0);
+            Instantiate(_laserPrefab, transform.position + offset, Quaternion.identity);
         }
 
     }
