@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        calculatMovement();
+        calculateMovement();
 
         //If I hit the space bar
         //spawn a new laser
@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
 
     }
 
-    void calculatMovement()
+    void calculateMovement()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
