@@ -8,6 +8,8 @@ public class Player : MonoBehaviour
     //Set a private speed variable
     [SerializeField]
     private float _speed = 3.5f;
+    [SerializeField]
+    private GameObject _laserPrefab;
     void Start()
     {
         //Define a starting position.
@@ -20,6 +22,15 @@ public class Player : MonoBehaviour
     void Update()
     {
         calculatMovement();
+
+        //If I hit the space bar
+        //spawn a new laser
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Instantiate(_laserPrefab, transform.position, Quaternion.identity);
+        }
+
     }
 
     void calculatMovement()
