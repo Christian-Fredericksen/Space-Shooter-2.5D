@@ -38,6 +38,7 @@ public class Enemy : MonoBehaviour
             {
                 player.damage();
             }
+
             Destroy(gameObject);
         }
 
