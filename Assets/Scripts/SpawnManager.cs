@@ -34,8 +34,8 @@ public class SpawnManager : MonoBehaviour
         float _randomX = Random.Range(-9f, 9f);
         while (true)
         {
-            Instantiate(_enemy, new Vector3(_randomX, 5, 0), Quaternion.identity);
-            yield return new WaitForSeconds(5.0f);
+            Instantiate(_enemy, new Vector3(_randomX, 6.5f, 0), Quaternion.identity);
+            yield return new WaitForSeconds(2.0f);
         }
     }
 }
