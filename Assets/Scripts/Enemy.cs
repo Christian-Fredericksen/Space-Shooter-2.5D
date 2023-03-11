@@ -13,9 +13,6 @@ public class Enemy : MonoBehaviour
 
     }
 
-    //[SerializeField]
-    //private float _speed = 4.0f;
-
     // Update is called once per frame
     void Update()
     {
@@ -30,10 +27,9 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
         if (other.tag == "Player")
         {
-            Player player = other.transform.GetComponent<Player>();
+            Player player = other.GetComponent<Player>();
 
             if (player != null)
             {
@@ -49,7 +45,10 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
 }
+
+
 
 
 
