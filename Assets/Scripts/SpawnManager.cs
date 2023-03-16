@@ -24,7 +24,7 @@ public class SpawnManager : MonoBehaviour
     }
     IEnumerator SpawnRoutine()
     {
-        Vector3 spawnX = new Vector3(Random.Range(-9f, 9f), 6.5f, 0);
+        Vector3 spawnX = new Vector3(Random.Range(-9.0f, 9.0f), 6.5f, 0);
         while (_stopSpawning == false)
         {
             GameObject _newEnemy = Instantiate(_enemyPrefab, spawnX , Quaternion.identity);
