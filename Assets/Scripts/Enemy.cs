@@ -33,7 +33,7 @@ public class Enemy : MonoBehaviour
 
             if (player != null)
             {
-                player.damage();
+                player.Damage();
             }
 
             Destroy(gameObject);

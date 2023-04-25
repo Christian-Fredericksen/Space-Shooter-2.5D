@@ -10,11 +10,16 @@ public class Player : MonoBehaviour
     [SerializeField]
     private GameObject _laserPrefab;
     [SerializeField]
+    private GameObject _tripleShotPrefab;
+    [SerializeField]
     private float _fireRate = 0.15f;
     private float _canFire = 0.0f;
     [SerializeField]
     private int _lives = 3;
     private SpawnManager _spawnManager;
+    [SerializeField]
+    private bool _tripleShotEnabled = false;
+    
     
     void Start()
     {
@@ -32,16 +37,15 @@ public class Player : MonoBehaviour
     
     void Update()
     {
-        calculateMovement();
+        CalculateMovement();
 
         if (Input.GetKeyDown(KeyCode.M) && Time.time > _canFire)
         {
-            fireLaser();
+            FireLaser();
         }
-
     }
 
-    void calculateMovement()
+    void CalculateMovement()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
@@ -68,20 +72,25 @@ public class Player : MonoBehaviour
         }
     }
 
-    void fireLaser()
+    void FireLaser()
     {
         _canFire = Time.time + _fireRate;
+        if (_tripleShotEnabled != false)
+        {
+            Instantiate(_tripleShotPrefab, transform.position, Quaternion.identity);
+        }
+        else if(_tripleShotEnabled == false)
+        {
         Instantiate(_laserPrefab, transform.position + new Vector3(0, 1.0f, 0), Quaternion.identity);
+        }
     }
 
-    public void damage()
+    public void Damage()
     {
         _lives--;
         if (_lives < 1)
         {
-            //Communicate with Spawn_Manager
             _spawnManager.OnPlayerDeath();
-            //tell it to stop spawning
             Destroy(gameObject);
         }
     }

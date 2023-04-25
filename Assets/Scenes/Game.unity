@@ -405,11 +405,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1316687573}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.16276915, y: -1.8133272, z: -0.7997763}
-  m_LocalScale: {x: 1.1151472, y: 1.106987, z: 1}
+  m_LocalPosition: {x: -0.23, y: 0.1451, z: 0}
+  m_LocalScale: {x: 1.1215177, y: 1.1335677, z: 1}
   m_Children: []
-  m_Father: {fileID: 1597208069}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1341536565
 GameObject:
@@ -489,11 +489,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1341536565}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1, y: -1.02, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1341536568
 MonoBehaviour:
@@ -509,8 +509,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 5
   _laserPrefab: {fileID: 6710448753047547199, guid: 957c4d9ad4bae1c4eb9460b513fe0f88, type: 3}
+  _tripleShotPrefab: {fileID: 940342537183781278, guid: a5e29e218c59871429dea29bfa2d60fb, type: 3}
   _fireRate: 0.15
   _lives: 3
+  _tripleShotEnabled: 1
 --- !u!61 &1341536569
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -524,7 +526,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.053155422, y: 0.02657795}
+  m_Offset: {x: -0.013283312, y: 0.025082111}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -535,7 +537,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.419016, y: 4.2163525}
+  m_Size: {x: 1.8273813, y: 3.9970942}
   m_EdgeRadius: 0
 --- !u!1 &1597208067
 GameObject:
@@ -580,7 +582,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 380385414}
-  - {fileID: 1316687575}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
