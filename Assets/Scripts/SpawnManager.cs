@@ -17,7 +17,6 @@ public class SpawnManager : MonoBehaviour
         StartCoroutine(SpawnRoutine());
     }
 
-    // Update is called once per frame
     IEnumerator SpawnRoutine()
     {
         Vector3 spawnX = new Vector3(Random.Range(-9.0f, 9.0f), 6.5f, 0);
