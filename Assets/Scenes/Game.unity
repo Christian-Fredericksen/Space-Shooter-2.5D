@@ -299,6 +299,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 93.82501, y: -378.461, z: -347.754}
+--- !u!1 &205348369 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6056413899707151607, guid: d5fee96d80725b64a9d772ea23e49f88, type: 3}
+  m_PrefabInstance: {fileID: 1096431353}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &205348370
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205348369}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8864aa253b35e6148b85f6adbf4ca8a2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &380385413
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,7 +370,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6056413899707151602, guid: d5fee96d80725b64a9d772ea23e49f88, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.03
+      value: 4.02
       objectReference: {fileID: 0}
     - target: {fileID: 6056413899707151602, guid: d5fee96d80725b64a9d772ea23e49f88, type: 3}
       propertyPath: m_LocalPosition.z
@@ -379,6 +403,10 @@ PrefabInstance:
     - target: {fileID: 6056413899707151602, guid: d5fee96d80725b64a9d772ea23e49f88, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6056413899707151606, guid: d5fee96d80725b64a9d772ea23e49f88, type: 3}
+      propertyPath: _speed
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6056413899707151607, guid: d5fee96d80725b64a9d772ea23e49f88, type: 3}
       propertyPath: m_Name
@@ -626,6 +654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyPrefab: {fileID: 5877430917209453812, guid: ee31db08d19dec64d866253d0b805edc, type: 3}
+  _tripleShotPowerupPrefab: {fileID: 6056413899707151607, guid: d5fee96d80725b64a9d772ea23e49f88, type: 3}
   _enemyContainer: {fileID: 380385413}
 --- !u!4 &1597208069
 Transform:
